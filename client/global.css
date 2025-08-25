@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Gen Z-friendly color scheme with vibrant gradients and modern aesthetics
+   */
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Vibrant primary - Electric Blue */
+    --primary: 261 73% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft secondary */
+    --secondary: 270 50% 98%;
+    --secondary-foreground: 261 73% 35%;
+
+    --muted: 270 30% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Neon Coral accent */
+    --accent: 351 83% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 20% 90%;
+    --input: 270 20% 94%;
+    --ring: 261 73% 65%;
+
+    --radius: 1rem;
+
+    /* Gen Z specific colors */
+    --adventure: 261 73% 65%;
+    --adventure-foreground: 0 0% 100%;
+    --sunset: 351 83% 61%;
+    --sunset-foreground: 0 0% 100%;
+    --electric: 195 100% 50%;
+    --electric-foreground: 0 0% 100%;
+    --neon-pink: 321 78% 69%;
+    --neon-pink-foreground: 0 0% 100%;
+    --cyber-yellow: 54 100% 62%;
+    --cyber-yellow-foreground: 222.2 84% 4.9%;
+    --mint: 162 73% 46%;
+    --mint-foreground: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 261 73% 65%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 270 50% 98%;
+    --sidebar-accent-foreground: 261 73% 35%;
+    --sidebar-border: 270 20% 90%;
+    --sidebar-ring: 261 73% 65%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 210 100% 56%;
+
+    /* Dark mode travel colors */
+    --adventure: 210 100% 56%;
+    --adventure-foreground: 0 0% 100%;
+    --sunset: 25 95% 53%;
+    --sunset-foreground: 0 0% 100%;
+    --forest: 145 63% 42%;
+    --forest-foreground: 0 0% 100%;
+    --mountain: 220 13% 69%;
+    --mountain-foreground: 220 13% 18%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 210 100% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 210 100% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  /* Gen Z Gradient Backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+
+  .gradient-electric {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .gradient-sunset {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  }
+
+  .gradient-cyber {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  }
+
+  .gradient-neon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+
+  /* Glass Morphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Card Animations */
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl;
+  }
+
+  .card-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Button Animations */
+  .btn-bounce {
+    @apply transition-all duration-200 active:scale-95;
+  }
+
+  .btn-pulse {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Story-like Card */
+  .story-card {
+    @apply relative overflow-hidden rounded-3xl;
+    background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  }
+
+  /* Swipe Cards */
+  .swipe-card {
+    @apply relative bg-white rounded-3xl shadow-2xl border-0;
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+  }
+
+  /* Neon Text */
+  .neon-text {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+
+  /* Instagram-like Stories */
+  .story-ring {
+    background: conic-gradient(from 0deg, #f093fb, #f5576c, #4facfe, #00f2fe, #f093fb);
+    padding: 3px;
+    border-radius: 50%;
+  }
+
+  .story-inner {
+    background: white;
+    border-radius: 50%;
+    padding: 3px;
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0% { box-shadow: 0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)); }
+    100% { box-shadow: 0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary)); }
+  }
+
+  @keyframes slideInUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fadeInScale {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-slide-up {
+    animation: slideInUp 0.5s ease-out;
+  }
+
+  .animate-fade-scale {
+    animation: fadeInScale 0.3s ease-out;
+  }
+
+  /* Mobile-first responsive utilities */
+  .mobile-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .mobile-text {
+    @apply text-sm sm:text-base;
+  }
+
+  .mobile-card {
+    @apply mx-2 sm:mx-0;
+  }
+
+  /* TikTok/Reels-style scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .reels-scroll {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior: contain;
+  }
+
+  .reels-card {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Smooth entrance animation for cards */
+  .reels-card-enter {
+    animation: slideInCard 0.6s ease-out;
+  }
+
+  @keyframes slideInCard {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
