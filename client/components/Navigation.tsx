@@ -19,7 +19,7 @@ const Navigation = () => {
               <span className="text-white text-lg font-bold">T</span>
             </div>
             <span className="text-xl font-black bg-gradient-to-r from-adventure to-sunset bg-clip-text text-transparent">
-              TravelBuddy
+              Planbana
             </span>
           </Link>
 

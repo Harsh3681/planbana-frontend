@@ -71,7 +71,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              How TravelBuddy Works
+              How Planbana Works
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Simple, safe, and secure way to join events or find activity partners in just 3 steps
@@ -120,7 +120,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose TravelBuddy?
+              Why Choose Planbana?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We've built the safest and most reliable platform for finding activity partners and creating meaningful experiences
@@ -366,7 +366,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="bg-white text-adventure hover:bg-gray-100" asChild>
               <Link to="/register">
-                Join TravelBuddy Today
+                Join Planbana Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
