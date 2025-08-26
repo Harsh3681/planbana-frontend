@@ -55,10 +55,8 @@
 
 ## 🔗 Demo & Source  
 
-- **Frontend:** [planbana.netlify.app](https://planbana.netlify.app)  
-- **Backend Repo:** [PlanBana/planbana-backend](https://github.com/PlanBana/planbana-backend)  
-- **Frontend Repo:** [PlanBana/planbana-fronend-web-builderio](https://github.com/PlanBana/planbana-fronend-web-builderio)  
-
+- **Web:** [planbana.Render.app](https://planbana.onrender.com/)
+  
 ---
 
 ## ⚙️ Setup & Installation  
